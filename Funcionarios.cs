@@ -6,14 +6,34 @@ namespace POO{
         private string dataNacimento= "";
         private Endereco endereco;
         private double salario = 1800.00;
+        private int codigoFuncionario;
 
 
-        public virtual Funcionarios(string cpf, string nome, string dataNacimento, string rg, Endereco endereco){
+        public Funcionarios(string cpf, string nome, string dataNacimento, string rg, Endereco endereco, int codigoFuncionario){
             this.cpf = cpf;
             this.nome = nome;
             this.dataNacimento = dataNacimento;
             this.rg = rg;
             this.endereco = endereco;
+            this.codigoFuncionario = codigoFuncionario;
+
+        }
+
+        public void ExibeEndereco(){
+            Console.WriteLine("Estado : " + endereco.GetEstado());
+            Console.WriteLine("Cep : " + endereco.GetCep());
+            Console.WriteLine("Cidade : " + endereco.GetCidade());
+            Console.WriteLine("Bairro: " + endereco.GetBairro());
+            Console.WriteLine("Rua: " + endereco.GetRua());
+            Console.WriteLine("Número da residencia: " + endereco.GetNumeroResidencia());
+
+        }
+
+        public int GetCodigoFuncionario(){
+            return codigoFuncionario;
+        } 
+        public void SetCodigoFuncionario(int codigoFuncionario){
+            this.codigoFuncionario = codigoFuncionario;
         }
 
         public double GetSalario(){

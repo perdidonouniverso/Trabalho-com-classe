@@ -2,17 +2,17 @@ namespace POO{
     public class Produtos{
 
         private string nomeProduto = "";
-        private int codigo;
         private string marca = "";
         private string descricao = "";
         private double valorUnitario = 0;
+        private int codigoProduto;
 
-        public Produtos(string nomeProduto, int codigo, string marca, string descricao, double valorUnitario){
+        public Produtos(string nomeProduto, int codigo, string marca, string descricao, double valorUnitario, int codigoProduto){
             this.nomeProduto = nomeProduto;
-            this.codigo = codigo;
             this.marca = marca;
             this.descricao = descricao;
             this.valorUnitario = valorUnitario;
+            this.codigoProduto = codigoProduto;
         }
 
         public double GetValorUnitario(){
@@ -22,12 +22,14 @@ namespace POO{
             this.valorUnitario = valorUnitario;
         }
 
-        public int GetCodigo(){
-            return codigo;
+        public double GetCodigo(){
+            return codigoProduto;
         } 
-        public void SetCodigo(int codigo){
-            this.codigo = codigo;
+        public void SetCodigo(int codigoProduto){
+            this.codigoProduto = codigoProduto;
         }
+
+        
 
         public string GetNomeProduto(){
             return nomeProduto;

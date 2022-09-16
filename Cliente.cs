@@ -12,6 +12,8 @@ namespace POO{
 
 
 
+
+
         
         public Cliente(string cpf, string nome, string rg, string dataNacimento, Endereco endereco, int codigoCliente){
             this.cpf = cpf;
@@ -19,7 +21,18 @@ namespace POO{
             this.rg = rg;
             this.dataNacimento = dataNacimento;
             this.endereco = endereco;
+            this.codigoCliente = codigoCliente;
 
+
+        }
+
+        public void ExibeEndereco(){
+            Console.WriteLine("Estado : " + endereco.GetEstado());
+            Console.WriteLine("Cep : " + endereco.GetCep());
+            Console.WriteLine("Cidade : " + endereco.GetCidade());
+            Console.WriteLine("Bairro: " + endereco.GetBairro());
+            Console.WriteLine("Rua: " + endereco.GetRua());
+            Console.WriteLine("Número da residencia: " + endereco.GetNumeroResidencia());
 
         }
 
